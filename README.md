@@ -30,3 +30,7 @@ Important: If you were to modify your models later, then you'll need to migrate 
 3. `db.create()`       
 (Our Postgres database should be populated with these two tables and their respective columns and relationships.)
 4. Now, exit the Python interpreter: `exit()`
+
+
+## To RUN the Application
+1. `python3 run.py`
