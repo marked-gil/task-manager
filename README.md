@@ -12,4 +12,4 @@ This walkthrough project is built with:
 2. `touch env.py`
     * env.py - where we store sensitive data that needs to be hidden
     * Be sure to have **.gitignore** file that contains any file and folders that should be ignored by GitHub (eg, env.py)
-3. 
+3. `# noqa` - means 'No Quality Assurance' - to stop the linting warnings that are not technically accurate
