@@ -34,3 +34,15 @@ Important: If you were to modify your models later, then you'll need to migrate 
 
 ## To RUN the Application
 1. `python3 run.py`
+
+
+### Resources:
+* [Python strftime cheatsheet](https://strftime.org/)
+* [Built-in Jinja Filters](https://jinja.palletsprojects.com/en/3.0.x/templates/#builtin-filters)
+
+### Notes:  
+* Convert database queries into Python lists.   
+> Whenever you query the database, you get a **Cursor Object** (aka 'QuerySet').
+In some cases, you can't use a Cursor Object on the front-end, or with some of the Jinja template filters.
+Oftentimes, it's actually better to convert your queries into Python lists.     
+> Example: `list(Task.query.order_by(Task.id).all())`
