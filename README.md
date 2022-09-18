@@ -45,4 +45,7 @@ Important: If you were to modify your models later, then you'll need to migrate 
 > Whenever you query the database, you get a **Cursor Object** (aka 'QuerySet').
 In some cases, you can't use a Cursor Object on the front-end, or with some of the Jinja template filters.
 Oftentimes, it's actually better to convert your queries into Python lists.     
-> Example: `list(Task.query.order_by(Task.id).all())`
+> Example: `list(Task.query.order_by(Task.id).all())`   
+
+* If you recall, we created a relationship between our Category and Task models, using a `'backref'` and the `'ondelete' cascade`.
+Once the `backref` and `ondelete cascade` are added, it will perform a cascade effect and delete any task utilizing the category.
