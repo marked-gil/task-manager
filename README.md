@@ -86,7 +86,9 @@ a variable of "DATABASE_URL" behind the scenes, which we cannot override.) This 
     > python3   
     > from taskmanager import db    
     > db.create_all()       
-    > exit()
+    > exit()    
+
+    (Remember, if you make any changes to your models anytime during development once deployed to Heroku, you will need to make these migrations once again in this Heroku console.)
 
 ### Resources:
 * [Python strftime cheatsheet](https://strftime.org/)
