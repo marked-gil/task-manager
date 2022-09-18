@@ -69,7 +69,15 @@ Important: If you were to modify your models later, then you'll need to migrate 
     * Our new Postgres database URL will be automatically applied (and is being hosted on Amazon AWS)
     * When we created our environment variables, we assigned a variable of "DB_URL". (Please note, if you are using our recommended workspace environment, it actually comes with
 a variable of "DATABASE_URL" behind the scenes, which we cannot override.) This is how you can easily distinguish between the two databases.    
-    "DB_URL" is for our local database when working in the IDE workspace, whereas "DATABASE_URL" is the assigned Postgres database on our deployed app within Heroku. They are two completely separate databases.
+    "DB_URL" is for our local database when working in the IDE workspace, whereas "DATABASE_URL" is the assigned Postgres database on our deployed app within Heroku. They are two completely separate databases.       
+
+    Add the following in the HEROKU **CONFIG VARS**:    
+    a. IP - <VALUE>     
+    b. PORT - <VALUE>     
+    c. SECRET_KEY - <VALUE>     
+    d. DEBUG - <VALUE> (Should be 'False' when in production mode)
+
+8. Deploy the app using either Heroku CLI or GitHub.
 
 ### Resources:
 * [Python strftime cheatsheet](https://strftime.org/)
