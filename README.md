@@ -77,7 +77,16 @@ a variable of "DATABASE_URL" behind the scenes, which we cannot override.) This 
     c. SECRET_KEY - <VALUE>     
     d. DEBUG - <VALUE> (Should be 'False' when in production mode)
 
-8. Deploy the app using either Heroku CLI or GitHub.
+8. Deploy the app using either Heroku CLI or GitHub.    
+
+9. Create the database in Heroku:   
+    A. Go to 'MORE' tab.
+    B. Click on 'Run Console'.
+    C. In the console, type the following:      
+    > python3   
+    > from taskmanager import db    
+    > db.create_all()       
+    > exit()
 
 ### Resources:
 * [Python strftime cheatsheet](https://strftime.org/)
